@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css  ">
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/icon.png" alt="password_logo">
+        <h1 class="title">
+            JavaScript Password Generator 
+        </h1>
+    </header>
+    <main>
+        <h2 class="main_content_title">Enter the properties for the password to generate!</h2>
+        <div class="break"></div>
+        <div class='form'>
+            <input id="includeLower" type="radio" onclick="toggleRadio(this)">
+            <label for="includeLower">Include lowercase letters</label>
+            <div class="break"></div>
+            <input id="includeUpper" type="radio" onclick="toggleRadio(this)">
+            <label for="includeUpper">Include uppercase letters</label>
+            <div class="break"></div>
+            <input type="radio" id="includeNumber" onclick="toggleRadio(this)">
+            <label for="includeNumber">Include numbers</label>
+            <div class="break"></div>
+            <input type="radio" id="includeSpecial" onclick="toggleRadio(this)">
+            <label for="includeSpecial">Include special characters</label>
+            <div class="break"></div>
+            <input type="number" id="length" min="1" max="50">
+            <label for="length">Length of password</label>
+            <div class="break"></div>
+            <button type="submit" class="submit" onclick="generatepwd()">Generate</button>
+        </div>
+        <div class="break"></div>
+        <div class="results">
+            <h2 id="result"></h2>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
